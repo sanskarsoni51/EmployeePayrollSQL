@@ -28,3 +28,9 @@ SELECT * FROM employee_payroll;
 
 -- Retrieve record of particular from the employee_payroll table
 select salary from employee_payroll where name = 'Bill';
+
+-- Add a new column named "gender" after the "name" column in the employee_payroll table
+ALTER TABLE employee_payroll ADD gender CHAR(1) AFTER name;
+
+-- Update the gender column for specific employees in the employee_payroll table
+UPDATE employee_payroll SET gender = 'M' WHERE name IN ('Bill', 'Mark', 'Charlie');
