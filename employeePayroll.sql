@@ -16,3 +16,9 @@ CREATE TABLE employee_payroll
 
 -- Display the structure of the employee_payroll table
 DESCRIBE employee_payroll;
+
+-- Insert records into the employee_payroll table
+INSERT INTO employee_payroll (name, salary, start) VALUES
+    ('Bill', 100000.00, '2018-01-03'),
+    ('Mark', 100000.00, '2018-01-03'),
+    ('Charlie', 100000.00, '2018-01-03');
