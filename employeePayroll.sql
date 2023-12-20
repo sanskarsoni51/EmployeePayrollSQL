@@ -45,3 +45,18 @@ phone_number int unsigned,
 department varchar(100) not null,
 address varchar(200)
 );
+
+-- Add new columns to store additional payroll-related information
+ALTER TABLE employee_payroll
+ADD basic_pay INT,
+    deduction INT,
+    taxable_pay INT,
+    income_tax INT;
+
+-- Add a new column "net_pay" with a default value of 0
+ALTER TABLE employee_payroll
+ADD net_pay INT DEFAULT 0;
+
+-- Drop the existing "salary" column from the employee_payroll table
+ALTER TABLE employee_payroll
+DROP COLUMN salary;
