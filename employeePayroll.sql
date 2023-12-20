@@ -60,3 +60,13 @@ ADD net_pay INT DEFAULT 0;
 -- Drop the existing "salary" column from the employee_payroll table
 ALTER TABLE employee_payroll
 DROP COLUMN salary;
+
+
+-- Insert records into the employee_payroll table with detailed payroll information for Terisa
+INSERT INTO employee_payroll (name, department, gender, basic_pay, deduction, taxable_pay, income_tax, net_pay, start)
+VALUES
+    ('terisa', 'Marketing', 'F', 3000000, 1000000, 2000000, 500000, 1500000, '2018-01-03'),
+    ('terisa', 'Sales', 'F', 3000000, 1000000, 2000000, 500000, 1500000, '2018-01-03');
+
+-- Retrieve records from the employee_payroll table for employees with the name 'terisa'
+SELECT * FROM employee_payroll WHERE name = 'terisa';
