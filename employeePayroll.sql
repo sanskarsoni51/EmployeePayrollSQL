@@ -25,3 +25,6 @@ INSERT INTO employee_payroll (name, salary, start) VALUES
 
 -- Retrieve all records from the employee_payroll table
 SELECT * FROM employee_payroll;
+
+-- Retrieve record of particular from the employee_payroll table
+select salary from employee_payroll where name = 'Bill';
