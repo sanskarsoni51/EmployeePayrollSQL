@@ -34,3 +34,6 @@ ALTER TABLE employee_payroll ADD gender CHAR(1) AFTER name;
 
 -- Update the gender column for specific employees in the employee_payroll table
 UPDATE employee_payroll SET gender = 'M' WHERE name IN ('Bill', 'Mark', 'Charlie');
+
+-- Calculate the total salary for male employees (gender = 'M') in the employee_payroll table
+SELECT SUM(salary) AS total_salary_male FROM employee_payroll WHERE gender = 'M';
